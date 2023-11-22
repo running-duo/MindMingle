@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MindMingleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MindMingleApplication.class, args);
+        SpringApplication.run(MindMingleApplication.class);
     }
 
 }
