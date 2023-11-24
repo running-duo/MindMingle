@@ -11,10 +11,19 @@ import java.util.List;
 @Data
 public class Response<T> {
 
+    /**
+     * 响应码
+     */
     public int code;
 
+    /**
+     * 描述
+     */
     private String msg;
 
+    /**
+     * 响应结构
+     */
     private T data;
 
     private Response(int code, T data){

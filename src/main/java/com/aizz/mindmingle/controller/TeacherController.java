@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * 教师模块
+ *
+ * @author zhangyuliang
+ */
 @RestController
 @RequestMapping("/teacher")
 public class TeacherController {
@@ -15,30 +20,59 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
+    /**
+     * 列表
+     *
+     * @return
+     */
     @GetMapping("/list")
-    public Response<List<TeacherDO>> list(){
+    public Response<List<TeacherDO>> list() {
         return Response.success(teacherService.list());
     }
 
+    /**
+     * 新增
+     *
+     * @param teacherDO
+     * @return
+     */
     @PostMapping("/add")
-    public Response<Void> add(@RequestBody TeacherDO teacherDO){
+    public Response<Void> add(@RequestBody TeacherDO teacherDO) {
         teacherService.add(teacherDO);
         return Response.success();
     }
 
+    /**
+     * 修改
+     *
+     * @param teacherDO
+     * @return
+     */
     @PostMapping("/edit")
-    public Response<Void> edit(@RequestBody TeacherDO teacherDO){
+    public Response<Void> edit(@RequestBody TeacherDO teacherDO) {
         teacherService.edit(teacherDO);
         return Response.success();
     }
 
+    /**
+     * 详情
+     *
+     * @param id 教师id
+     * @return
+     */
     @GetMapping("/detail")
-    public Response<TeacherDO> detail(@RequestParam("id") Long id){
+    public Response<TeacherDO> detail(@RequestParam("id") Long id) {
         return Response.success(teacherService.detail(id));
     }
 
+    /**
+     * 删除
+     *
+     * @param id 教师id
+     * @return
+     */
     @PostMapping("/remove")
-    public Response<Void> remove(@RequestParam("id") Long id){
+    public Response<Void> remove(@RequestParam("id") Long id) {
         teacherService.remove(id);
         return Response.success();
     }
