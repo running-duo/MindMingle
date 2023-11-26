@@ -23,21 +23,21 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public void add(TeacherDO teacherDO) {
-
+        teacherDAO.save(teacherDO);
     }
 
     @Override
     public void edit(TeacherDO teacherDO) {
-
+        teacherDAO.updateById(teacherDO);
     }
 
     @Override
     public TeacherDO detail(Long id) {
-        return null;
+        return teacherDAO.getById(id);
     }
 
     @Override
     public void remove(Long id) {
-
+        teacherDAO.removeById(id);
     }
 }
