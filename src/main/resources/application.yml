@@ -12,8 +12,8 @@ server:
     context-path: /
 
 miniProgram:
-  appId: wx5853d8c4bcb50b56
-  appSecret: 75dcf48286d5e004f98d715339ac30b5
+  appId: test
+  appSecret: test
 
 logging:
   level:
