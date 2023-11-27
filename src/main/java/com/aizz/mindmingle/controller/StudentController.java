@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author zhangyuliang
  */
 @RestController
-@RequestMapping("/teacher")
+@RequestMapping("/student")
 public class StudentController {
 }
