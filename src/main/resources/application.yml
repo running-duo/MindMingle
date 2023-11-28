@@ -2,9 +2,9 @@ spring:
   application:
     name: mindmingle
   datasource:
-    url: jdbc:mysql://81.69.252.112:3306/cms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
-    username: root
-    password: 123456
+    url: ENC(/VUNg/7wr8TEQ5Tam8voazOJI5EtWqrEcW63aa4+3fbn9LLxRpbRiGcZp2QZ8388lY0sUJ5ixJPR54AeDKXffIm/L+hclbtNeyTKd3tbWcC5tDje5Fq814I6uTRfyhuGN6Eny/vBIPt+Tb9KS+YQHxuccFkD1ZV+4NAa3fqKU4tSQOBhjSxqdilw1t1W4PM+gxBhRokAAPyiB6ExWC8usw==)
+    username: ENC(WIFMV58z24Zt3nJpiyZzAhBtgfPEsBRf9imn3jb4DjQKeGEXJfHECmRvhtLAX5iz)
+    password: ENC(UaS3ejqw1tpgCRUHtD6/H4LXwfd4ZCQlgzVu2CNh9Y9mOb0k4X+gNn+iETgBy8pB)
 
 server:
   port: 8236
@@ -12,8 +12,8 @@ server:
     context-path: /
 
 miniProgram:
-  appId: test
-  appSecret: test
+  appId: ENC(vkgI8UIFzeVpzPSROEdLAzQoHDkVzhyTBknaLXDEgvdVCEoqq150TaubWSmV7/SKsGzPcsiN6XSA+i9UbzS/Zw==)
+  appSecret: ENC(/6brlrQOjBIpIU7npJrfLit+35e8U3NY/pU3aE4Xlby69n6tyxC+hUZKiNphblPJx1LPj9VDwWbDPowLGPbfm3pjJXbJOA+rNBJs5gYYanI=)
 
 logging:
   level:
