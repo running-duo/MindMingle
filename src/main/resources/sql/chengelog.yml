@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: init
+      author: zhangyuliang
+      comment: 初始化
+      changes:
+        - sqlFile:
+            splitStatements: true
+            stripComments: false
+            path: sql/init.sql
+        - tagDatabase:
+            tag: 1.0.0

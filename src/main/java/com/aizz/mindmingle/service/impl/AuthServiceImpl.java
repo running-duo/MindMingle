@@ -1,5 +1,6 @@
 package com.aizz.mindmingle.service.impl;
 
+import cn.hutool.http.HttpUtil;
 import com.aizz.mindmingle.service.AuthService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class AuthServiceImpl implements AuthService {
 
     private void miniProgramLogin(String code) {
         String url = wechatServerUrl + "?appId=" + appId + "&secret=" + appSecret + "&js_code=" + code + "&grant_type=authorization_code";
-//        restTemplate.exchange()
+        String body = HttpUtil.createGet(url).execute().body();
+
     }
 }
