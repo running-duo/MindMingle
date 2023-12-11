@@ -26,4 +26,4 @@ miniProgram:
 
 logging:
   level:
-    com.enbo.mapper: debug
+    com.aizz.mapper: debug
