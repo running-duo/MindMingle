@@ -6,7 +6,7 @@ spring:
     username: ENC(WIFMV58z24Zt3nJpiyZzAhBtgfPEsBRf9imn3jb4DjQKeGEXJfHECmRvhtLAX5iz)
     password: ENC(UaS3ejqw1tpgCRUHtD6/H4LXwfd4ZCQlgzVu2CNh9Y9mOb0k4X+gNn+iETgBy8pB)
   liquibase:
-    enabled: false
+    enabled: true
     change-log: sql/changelog.yml
 
 server:

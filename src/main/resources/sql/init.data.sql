@@ -1,0 +1,1 @@
+insert into `cms`.`t_teacher`(`name`, `phone`, `wx_id`, `memo`, `create_time`, `update_time`) values ('温洪波', '1801234321', null, '测试', now(), now());
