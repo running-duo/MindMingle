@@ -2,6 +2,7 @@ package com.aizz.mindmingle.controller;
 
 import com.aizz.mindmingle.common.Response;
 import com.aizz.mindmingle.entity.dos.TeacherDO;
+import com.aizz.mindmingle.entity.dto.RemoveDTO;
 import com.aizz.mindmingle.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -67,13 +68,10 @@ public class TeacherController {
 
     /**
      * 删除
-     *
-     * @param id 教师id
-     * @return
      */
     @PostMapping("/remove")
-    public Response<Void> remove(@RequestParam("id") Long id) {
-        teacherService.remove(id);
+    public Response<Void> remove(@RequestBody RemoveDTO removeDTO) {
+        teacherService.remove(removeDTO);
         return Response.success();
     }
 }

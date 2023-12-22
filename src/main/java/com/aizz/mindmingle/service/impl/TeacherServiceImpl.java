@@ -2,6 +2,7 @@ package com.aizz.mindmingle.service.impl;
 
 import com.aizz.mindmingle.dao.TeacherDAO;
 import com.aizz.mindmingle.entity.dos.TeacherDO;
+import com.aizz.mindmingle.entity.dto.RemoveDTO;
 import com.aizz.mindmingle.service.TeacherService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,10 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public void remove(Long id) {
-        teacherDAO.removeById(id);
+    public void remove(RemoveDTO removeDTO) {
+        List<Long> ids = removeDTO.getIds();
+        ids.forEach(id -> {
+            teacherDAO.removeById(id);
+        });
     }
 }

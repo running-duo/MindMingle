@@ -1,6 +1,7 @@
 package com.aizz.mindmingle.service;
 
 import com.aizz.mindmingle.entity.dos.TeacherDO;
+import com.aizz.mindmingle.entity.dto.RemoveDTO;
 
 import java.util.List;
 
@@ -14,5 +15,5 @@ public interface TeacherService {
 
     TeacherDO detail(Long id);
 
-    void remove(Long id);
+    void remove(RemoveDTO removeDTO);
 }

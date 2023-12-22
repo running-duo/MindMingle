@@ -8,3 +8,4 @@ memo varchar(255),
 create_time datetime,
 update_time datetime
 );
+alter table t_teacher auto_increment=1;
