@@ -1,1 +1,2 @@
 insert into `cms`.`t_teacher`(`name`, `phone`, `wx_id`, `memo`, `create_time`, `update_time`) values ('温洪波', '1801234321', null, '测试', now(), now());
+insert into `cms`.`t_student`(`name`, `phone`, `memo`, `total_course`, `remain_course`, `course_valid_date`, `create_time`, `update_time`) values ('王硕', '18012344321', '测试', 100, 80, '2024-12-31 23:59:59', now(), now());
