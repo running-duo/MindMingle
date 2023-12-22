@@ -27,7 +27,7 @@ public class WxAuthController {
                                @RequestParam(required = false) String echostr,
                                @RequestBody(required = false) String params) {
 
-        String token = "conf";
+        String token = "aizz";
         try {
             log.info("signature:", signature);
             log.info("timestamp:", timestamp);
