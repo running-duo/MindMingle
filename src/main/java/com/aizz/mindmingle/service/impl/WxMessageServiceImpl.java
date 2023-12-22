@@ -23,7 +23,8 @@ public class WxMessageServiceImpl implements WxMessageService {
     private String appSecret;
 
     @Override
-    public void push(String openId) {
+    public String push(String openId) {
+        String res = null;
         try {
             RestTemplate restTemplate = new RestTemplate();
             //这里简单起见我们每次都获取最新的access_token（时间开发中，应该在access_token快过期时再重新获取）
@@ -43,11 +44,12 @@ public class WxMessageServiceImpl implements WxMessageService {
             log.info(jsonObject.toString());
             ResponseEntity<String> responseEntity =
                     restTemplate.postForEntity(url, jsonObject, String.class);
-            String body = responseEntity.getBody();
-            log.info(body);
+            res = responseEntity.getBody();
+            log.info(res);
         } catch (Exception ex) {
             log.error("push error", ex);
         }
+        return res;
     }
 
     private String getAccessToken() {

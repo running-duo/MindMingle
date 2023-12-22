@@ -22,8 +22,7 @@ public class WxMessageController {
      * @return
      */
     @GetMapping("/push")
-    public Response<Void> push(@RequestParam("openId") String openId) {
-        wxMessageService.push(openId);
-        return Response.success();
+    public Response<String> push(@RequestParam("openId") String openId) {
+        return Response.success(wxMessageService.push(openId));
     }
 }
