@@ -4,6 +4,7 @@ import com.aizz.mindmingle.common.Response;
 import com.aizz.mindmingle.entity.dos.StudentDO;
 import com.aizz.mindmingle.entity.dto.RemoveDTO;
 import com.aizz.mindmingle.service.StudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
  *
  * @author zhangyuliang
  */
+@Slf4j
 @RestController
 @RequestMapping("/student")
 public class StudentController {
