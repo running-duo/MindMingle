@@ -2,8 +2,8 @@ spring:
   application:
     name: mindmingle
   datasource:
-    url: ENC(/VUNg/7wr8TEQ5Tam8voazOJI5EtWqrEcW63aa4+3fbn9LLxRpbRiGcZp2QZ8388lY0sUJ5ixJPR54AeDKXffIm/L+hclbtNeyTKd3tbWcC5tDje5Fq814I6uTRfyhuGN6Eny/vBIPt+Tb9KS+YQHxuccFkD1ZV+4NAa3fqKU4tSQOBhjSxqdilw1t1W4PM+gxBhRokAAPyiB6ExWC8usw==)
-    username: ENC(WIFMV58z24Zt3nJpiyZzAhBtgfPEsBRf9imn3jb4DjQKeGEXJfHECmRvhtLAX5iz)
+    url: ENC(5dE0RbnKVkK7cQzGSRQDBNHLaEWgBndU70NYWuTiPC+a39a2YpOJ70htcQOCspye/r+GHaVe7X6oZxRRaSiqzgcf0HHyQ7wQfzUAEA7Io+QEO7w0nK7b11Z4/USEl0KO9SxSicChfy3KtF+EGnf8x1rJmE6Bi+91y9vgmawB1pANW6qLQl8kJRWc0mDNCszDo3I3pQrlQuZI//cSkhU48w==)
+    username: ENC(5C8szEPzwmaLX5tAWHm/O7GpeFkmLcrx0EnOTGShgzistJ0PIlsPKfJZTHzY40Pd)
     password: ENC(UaS3ejqw1tpgCRUHtD6/H4LXwfd4ZCQlgzVu2CNh9Y9mOb0k4X+gNn+iETgBy8pB)
   liquibase:
     enabled: true
