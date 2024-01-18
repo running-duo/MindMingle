@@ -2,6 +2,7 @@ package com.aizz.mindmingle.service.impl;
 
 import cn.hutool.http.HttpUtil;
 import com.aizz.mindmingle.service.AuthService;
+import org.jasypt.util.text.AES256TextEncryptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

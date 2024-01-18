@@ -24,6 +24,10 @@ miniProgram:
   appId: ENC(vkgI8UIFzeVpzPSROEdLAzQoHDkVzhyTBknaLXDEgvdVCEoqq150TaubWSmV7/SKsGzPcsiN6XSA+i9UbzS/Zw==)
   appSecret: ENC(/6brlrQOjBIpIU7npJrfLit+35e8U3NY/pU3aE4Xlby69n6tyxC+hUZKiNphblPJx1LPj9VDwWbDPowLGPbfm3pjJXbJOA+rNBJs5gYYanI=)
 
+sign:
+  url: ENC(zMdshMqEeWj9K35CePbDnwx/87vz0wHJ24bQmOIjwkN3xoEVpuem6yu1C7GpJuBXRc5H0JYij6VeKTPN2URXg+xXhv4OAX7gK0D7IWucXxRc67LxzQb61uwCeu1mT+B5)
+  token: ENC(gLFCypIlQvROjiN4NK5KnOt2j4El5iKYJXdjtDz2UA33h1rX6HiVtSeZLsveM/Unoyt8nQ5iVE6QL71qQJn9taeJdHlrgdrcRXZhxX1SdbqLzyXFCLe8skAS+YwfMuaAcHd5j7CpGoZufj73W9sR1DRgqDpN7j0yINwfPk9gqHfnR2G86rTpBn+YpG/OTjJKB3nvynIe2RngZmbN+HuJW1D2DZNZgZ4D51hleVM1VblLYWCw0rOFI2LUpGkug7TbORIsoaydSPKgP65xQDMFhUzCZktEsQH/4HUa1j50UUqx6igIXHaVse6Rsdq/fI99ZaXc5x/LfGhSAKw1tJ62Xw==)
+
 logging:
   level:
     com.aizz.mapper: debug
