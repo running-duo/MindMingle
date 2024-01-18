@@ -26,7 +26,7 @@ public class SignSchedule {
     @Value("${sign.token}")
     private String token;
 
-    @Scheduled(cron = "0 7 * * *")
+    @Scheduled(cron = "0 7 * * * ?")
     private void cpSign() {
         log.info("准备签到...");
         try {
