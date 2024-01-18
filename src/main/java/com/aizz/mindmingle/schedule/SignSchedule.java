@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 @Slf4j
 @Component
@@ -26,7 +27,7 @@ public class SignSchedule {
     @Value("${sign.token}")
     private String token;
 
-    @Scheduled(cron = "0 7 * * * ?")
+    @Scheduled(cron = "0 0 7 * * ?")
     private void cpSign() {
         log.info("准备签到...");
         try {
@@ -38,6 +39,12 @@ public class SignSchedule {
             HashMap<String, String> map = new HashMap<>();
             // 组合请求头与请求体参数
             HttpEntity<String> requestEntity = new HttpEntity<>(JSONObject.toJSONString(map), headers);
+            // sleep随机数，两小时内
+            Random rand = new Random();
+            int value = rand.nextInt(7200000);
+            log.info("sleep[{}]millis...", value);
+            Thread.sleep(value);
+            log.info("发起签到...");
             JSONObject response = restTemplate.postForObject(url, requestEntity, JSONObject.class);
             log.info("签到响应:{}", response);
         } catch (Exception ex) {
