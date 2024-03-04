@@ -31,3 +31,11 @@ sign:
 logging:
   level:
     com.aizz.mapper: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
