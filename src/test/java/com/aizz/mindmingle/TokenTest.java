@@ -1,8 +1,11 @@
 package com.aizz.mindmingle;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.jasypt.util.text.AES256TextEncryptor;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.Import;
 
+@Import(EnableEncryptableProperties.class)
 public class TokenTest {
 
     @Test
