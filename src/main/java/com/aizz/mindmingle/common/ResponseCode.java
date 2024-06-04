@@ -1,6 +1,7 @@
 package com.aizz.mindmingle.common;
 
-import jakarta.servlet.http.HttpServletResponse;
+
+import javax.servlet.http.HttpServletResponse;
 
 public enum ResponseCode {
 

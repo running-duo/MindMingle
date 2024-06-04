@@ -1,6 +1,15 @@
 spring:
   application:
     name: mindmingle
+    token:
+      header: Authorization
+      salt: test
+      conflict: false
+      clientExpire: 3600
+      serverExpire: 36000
+      systemExpire: 60
+      ignoreUrls:
+        - /auth/login
   datasource:
     url: ENC(gOnBcVzjzLko3yhz9V8BtUA6t+1ajQpzFHFg0xKjeDVjs5dPp1brMoOwFRMNFX9E5jjwgwNqTRElYLrGY3BCrMQuYZeEQgADanaJW8677TU5eUH5OWFOsnkpkUvEMZN7pAlxpunrMivQ81G86G59djwXZXnRbETdBmExMnpSODnWxqSzpar+QEW6VO2qUAQTFQ9k9JCO2P/klsRbqrH7Cg==)
     username: ENC(lIUiI3BbrMl3Mc1Phvmo39u0pgh2Dd3ggefVJs9bIYBSL9bsUnP6pO5vz4HyGVbx0TjAJIlbZ7+aNav1/K0dIw==)
@@ -13,12 +22,6 @@ server:
   port: 8236
   servlet:
     context-path: /
-
-jwt:
-  header: "Authorization"
-  tokenPrefix: "Bearer "
-  secret: "aizz"
-  expireTime: 3600000
 
 miniProgram:
   appId: ENC(vkgI8UIFzeVpzPSROEdLAzQoHDkVzhyTBknaLXDEgvdVCEoqq150TaubWSmV7/SKsGzPcsiN6XSA+i9UbzS/Zw==)
