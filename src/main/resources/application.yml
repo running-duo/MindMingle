@@ -11,11 +11,11 @@ spring:
       ignoreUrls:
         - /auth/login
   datasource:
-    url: ENC(WhnZQ9ZRg0aJDwrDoCyYQJVKp2v31t0wWXtis3/xsPA4FfIUtzh5llTz0ZxqBuEhfIWmAhio2Zn7RpbhQx92Dl6ZNVwrgFlEEIAWY1/ErKwSYkyf0ND9h0mzzyHFvyV0DOcdy4MrZxXvID7ZlrRp0Kg0CkOX3bOIIrHBggmc/wR9kL9FEzMKdF17T18gYgeQHhe5dvsj7HT9DjzJd2yzow==)
+    url: ENC(1ySLSub6mvg45Zv/KIRd67bdY6rbC2NYvJPEWeqj6ArWnx2pzoa8MXWfhUvSq1SSUGiDT2Cjm5kE7nn8sWq44u+iiq7wfym2/9b2HQyowT35JhDJMjptHaFQq/M5+KiChL1GLgVMF97iFybBadr4MpBqphLv5fq8lkZgwHFNaOBcb3XCSaalmX80+c0NwaBIwIaei4htKuUkNnkfLcK1dA==)
     username: ENC(4k0/wbpipHQHDQL2k5waIQtXDMs8xOgBljdwBBmHpxdKVW4fir/yPd9YbTigyG9t)
     password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
   redis:
-    host: ENC(Zw1PytJ8A46e3d+8RkuJXZva7mv84QT2cOgSHXncNKrmZ/BWW7RPcelDEFThWUpX)
+    host: ENC(roFZUhfockQiO+oRw3A5eVE4woX3/qXehiHyrcrUHRm+DremOtpOMK4+V/RDnAwa)
     port: 6379
     database: 0
     password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
