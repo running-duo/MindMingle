@@ -11,7 +11,7 @@ spring:
       ignoreUrls:
         - /auth/login
   datasource:
-    url: ENC(1ySLSub6mvg45Zv/KIRd67bdY6rbC2NYvJPEWeqj6ArWnx2pzoa8MXWfhUvSq1SSUGiDT2Cjm5kE7nn8sWq44u+iiq7wfym2/9b2HQyowT35JhDJMjptHaFQq/M5+KiChL1GLgVMF97iFybBadr4MpBqphLv5fq8lkZgwHFNaOBcb3XCSaalmX80+c0NwaBIwIaei4htKuUkNnkfLcK1dA==)
+    url: jdbc:mysql://139.196.105.40:3306/cms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: ENC(4k0/wbpipHQHDQL2k5waIQtXDMs8xOgBljdwBBmHpxdKVW4fir/yPd9YbTigyG9t)
     password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
   redis:
