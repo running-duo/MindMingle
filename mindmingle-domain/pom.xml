@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.aizz</groupId>
+        <artifactId>mindmingle-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mindmingle-domain</artifactId>
+    <name>MindMingle Domain</name>
+    <description>Domain models (DOs, DTOs, VOs)</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aizz</groupId>
+            <artifactId>mindmingle-common</artifactId>
+        </dependency>
+
+        <!-- MyBatis-Plus Annotations -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Jackson for serialization -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- Hutool for date utilities -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <!-- Fastjson for JSON annotations -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+    </dependencies>
+</project>

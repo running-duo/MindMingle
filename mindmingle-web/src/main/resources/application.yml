@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: mindmingle
+    token:
+      header: Authorization
+      salt: test
+      conflict: false
+      clientExpire: 3600
+      serverExpire: 36000
+      systemExpire: 60
+      ignoreUrls:
+        - /auth/login
+  datasource:
+    url: jdbc:mysql://bj-cdb-g3ic1xfo.sql.tencentcdb.com:29106/cms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ENC(4k0/wbpipHQHDQL2k5waIQtXDMs8xOgBljdwBBmHpxdKVW4fir/yPd9YbTigyG9t)
+    password: Xiaofeng2026.
+  redis:
+    host: ENC(roFZUhfockQiO+oRw3A5eVE4woX3/qXehiHyrcrUHRm+DremOtpOMK4+V/RDnAwa)
+    port: 6379
+    database: 0
+    password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
+  liquibase:
+    enabled: false
+    change-log: sql/changelog.yml
+
+server:
+  port: 8236
+  servlet:
+    context-path: /
+
+miniProgram:
+  appId: ENC(vkgI8UIFzeVpzPSROEdLAzQoHDkVzhyTBknaLXDEgvdVCEoqq150TaubWSmV7/SKsGzPcsiN6XSA+i9UbzS/Zw==)
+  appSecret: ENC(/6brlrQOjBIpIU7npJrfLit+35e8U3NY/pU3aE4Xlby69n6tyxC+hUZKiNphblPJx1LPj9VDwWbDPowLGPbfm3pjJXbJOA+rNBJs5gYYanI=)
+
+sign:
+  url: ENC(zMdshMqEeWj9K35CePbDnwx/87vz0wHJ24bQmOIjwkN3xoEVpuem6yu1C7GpJuBXRc5H0JYij6VeKTPN2URXg+xXhv4OAX7gK0D7IWucXxRc67LxzQb61uwCeu1mT+B5)
+  token: ENC(gH2zPk012I4GuMXshOf8DtqxNRGcpmfDeklf9poLIVcu1Igns5vqfQBdDRCG5iPm8k8Zq6BhRmd/Z9EFwyVaWV7lwzMTCYVmze52lXml5DgP5TeQae0MVCmh4s8Q/QVexs2gC/fhUQQ4y/wFuBPOtGe048ToU8/1XwwODFH9N+b9TSZ22Et033mELPr/rR+QP1ILdEgC3mdQ/Yd1vBR/g5nrMEVjPAV7Y2DeHrvmWm2I3ItYFCHb2whLs+uIU3Ykgg8BHyp9CP6jVo4ClpMOk14EObqaHgg05NUHYe3xfBdZdFEvubb6JozPIj3UOlCwX40kgw6JwqPBVI0lh7j40w==)
+
+logging:
+  level:
+    com.aizz.mapper: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}

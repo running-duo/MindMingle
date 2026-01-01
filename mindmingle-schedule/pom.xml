@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.aizz</groupId>
+        <artifactId>mindmingle-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mindmingle-schedule</artifactId>
+    <name>MindMingle Schedule</name>
+    <description>Scheduled tasks module</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aizz</groupId>
+            <artifactId>mindmingle-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aizz</groupId>
+            <artifactId>mindmingle-infrastructure</artifactId>
+        </dependency>
+
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Utilities -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
