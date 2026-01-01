@@ -10,12 +10,13 @@ spring:
       systemExpire: 60
       ignoreUrls:
         - /auth/login
+        - /doc/**
   datasource:
     url: jdbc:mysql://bj-cdb-g3ic1xfo.sql.tencentcdb.com:29106/cms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: ENC(4k0/wbpipHQHDQL2k5waIQtXDMs8xOgBljdwBBmHpxdKVW4fir/yPd9YbTigyG9t)
     password: Xiaofeng2026.
   redis:
-    host: ENC(roFZUhfockQiO+oRw3A5eVE4woX3/qXehiHyrcrUHRm+DremOtpOMK4+V/RDnAwa)
+    host: 139.196.105.40
     port: 6379
     database: 0
     password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
