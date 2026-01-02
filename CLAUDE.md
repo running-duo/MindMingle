@@ -45,7 +45,6 @@ The application follows a standard Spring Boot layered architecture:
   - `AuthController` - Authentication endpoints
   - `WxAuthController` - WeChat Mini Program verification
   - `WxMessageController` - WeChat message handling
-  - `StudentController` & `TeacherController` - Business logic endpoints
 
 - **Service** (`service/`) - Business logic layer
   - Interface definitions in `service/`
