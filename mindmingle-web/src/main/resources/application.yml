@@ -22,7 +22,7 @@ spring:
     password: ENC(1WA0lHNAgu3hJ/nSCbCbcxFTKuhaB2MG8EYx/7+1wG8xEZUEkGLeL6ucu+Qb3eG0)
   liquibase:
     enabled: false
-    change-log: sql/changelog.yml
+    change-log: classpath:sql/changelog.yml
 
 server:
   port: 8236

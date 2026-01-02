@@ -2,6 +2,7 @@ package com.aizz.mindmingle.security;
 
 import com.aizz.mindmingle.common.Response;
 import com.aizz.mindmingle.common.ResponseCode;
+import com.aizz.mindmingle.infrastructure.mybatis.TenantContext;
 import com.alibaba.fastjson.JSON;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.MediaType;
@@ -40,6 +41,11 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
+        // 设置租户上下文
+        if (accessToken != null && accessToken.tenantId != null) {
+            TenantContext.setTenantId(accessToken.tenantId);
+        }
+
         for(RequestMatcher matcher : requestMatchers) {
             if(matcher.matches(request)) {
                 chain.doFilter(request, response);
@@ -56,5 +62,8 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.setStatus(ResponseCode.OK.getCode());
         response.getWriter().write(JSON.toJSONString(Response.error(accessToken.getValidCode(), accessToken.getValidDesc())));
+
+        // 清理租户上下文
+        TenantContext.clear();
     }
 }

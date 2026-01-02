@@ -1,0 +1,53 @@
+databaseChangeLog:
+  # Xiaofeng Platform Database Schema
+  - changeSet:
+      id: xiaofeng-schema-v1.0
+      author: claude
+      runOnChange: false
+      comment: "创建晓风平台数据库表结构"
+      changes:
+        - sqlFile:
+            path: sql/xiaofeng-schema.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: true
+      rollback:
+        - sql:
+            sql: |
+              DROP TABLE IF EXISTS t_menu_permission;
+              DROP TABLE IF EXISTS t_role_permission;
+              DROP TABLE IF EXISTS t_user_role;
+              DROP TABLE IF EXISTS t_menu;
+              DROP TABLE IF EXISTS t_permission;
+              DROP TABLE IF EXISTS t_role;
+              DROP TABLE IF EXISTS t_tool_member;
+              DROP TABLE IF EXISTS t_submission;
+              DROP TABLE IF EXISTS t_template;
+              DROP TABLE IF EXISTS t_tool;
+              DROP TABLE IF EXISTS t_user;
+              DROP TABLE IF EXISTS t_tenant;
+
+  # Xiaofeng Platform Initial Data
+  - changeSet:
+      id: xiaofeng-init-data-v1.0
+      author: claude
+      runOnChange: false
+      comment: "初始化晓风平台基础数据：角色、权限、菜单、默认用户"
+      changes:
+        - sqlFile:
+            path: sql/xiaofeng-init-data.sql
+            relativeToChangelogFile: false
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sql:
+            sql: |
+              DELETE FROM t_menu_permission;
+              DELETE FROM t_role_permission;
+              DELETE FROM t_user_role;
+              DELETE FROM t_menu;
+              DELETE FROM t_permission;
+              DELETE FROM t_role WHERE is_system = 1;
+              DELETE FROM t_template WHERE is_system = 1;
+              DELETE FROM t_user WHERE id = 1;
+              DELETE FROM t_tenant WHERE id = 1;

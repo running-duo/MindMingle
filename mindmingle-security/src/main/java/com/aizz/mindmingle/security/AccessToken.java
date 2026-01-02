@@ -72,6 +72,11 @@ public class AccessToken implements UserDetails {
     public Long userId;
 
     /**
+     * 租户id
+     */
+    public Long tenantId;
+
+    /**
      * 用户code
      */
     public String userCode;
