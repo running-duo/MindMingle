@@ -38,6 +38,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("用户名不能为空");
         }
 
+        log.info("开始查询用户: {}", username);
+
         // 查询用户信息
         LambdaQueryWrapper<UserDO> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(UserDO::getUsername, username);
@@ -47,6 +49,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             log.warn("用户不存在: {}", username);
             throw new UsernameNotFoundException("用户名或密码错误");
         }
+
+        log.info("查询到用户: id={}, username={}, tenant_id={}, password存在={}",
+                userDO.getId(), userDO.getUsername(), userDO.getTenantId(), userDO.getPassword() != null);
+        log.info("用户密码哈希: {}", userDO.getPassword());
 
         // 检查用户状态
         if (userDO.getStatus() == null || userDO.getStatus() != 1) {

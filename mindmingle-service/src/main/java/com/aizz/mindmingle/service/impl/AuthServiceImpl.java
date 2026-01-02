@@ -77,6 +77,9 @@ public class AuthServiceImpl implements AuthService {
             UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(loginDTO.getUsername(), loginDTO.getPassword());
 
+            log.info("准备进行认证，用户名: {}, 密码长度: {}", loginDTO.getUsername(),
+                    loginDTO.getPassword() != null ? loginDTO.getPassword().length() : 0);
+
             // 进行认证
             Authentication authentication = authenticationManager.authenticate(authenticationToken);
 
@@ -116,7 +119,7 @@ public class AuthServiceImpl implements AuthService {
                     .userId(userDO.getId())
                     .username(userDO.getUsername())
                     .realName(userDO.getRealName())
-                    .avatar(userDO.getAvatar())
+                    .avatar(userDO.getAvatarUrl())
                     .loginTime(new Date())
                     .build();
 
@@ -125,6 +128,7 @@ public class AuthServiceImpl implements AuthService {
 
         } catch (AuthenticationException e) {
             log.warn("用户登录失败: {}, 原因: {}", loginDTO.getUsername(), e.getMessage());
+            log.error("认证异常详情: ", e);
             throw new BadCredentialsException("用户名或密码错误");
         } catch (Exception e) {
             log.error("用户登录异常: {}", loginDTO.getUsername(), e);

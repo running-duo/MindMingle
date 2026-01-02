@@ -11,6 +11,7 @@ spring:
       ignoreUrls:
         - /auth/login
         - /doc/**
+        - /test/**
   datasource:
     url: jdbc:mysql://bj-cdb-g3ic1xfo.sql.tencentcdb.com:29106/cms?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: ENC(4k0/wbpipHQHDQL2k5waIQtXDMs8xOgBljdwBBmHpxdKVW4fir/yPd9YbTigyG9t)

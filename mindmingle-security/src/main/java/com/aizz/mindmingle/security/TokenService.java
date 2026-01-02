@@ -55,6 +55,20 @@ public class TokenService {
         String key = AccessToken.KEY + accessToken.getType() + ":" + accessToken.getUsername();
 //        redis.putExpireValue(key, accessToken, configuration.getServerExpire(), TimeUnit.SECONDS);
         Access access = Access.get();
+        if (access == null) {
+            // 初始化 Access 对象（用于登录等未经过 TokenAuthenticationFilter 的场景）
+            HttpServletRequest request = Access.httpRequest();
+            String requestIp = request != null ? request.getRemoteAddr() : "127.0.0.1";
+            String requestUrl = request != null ? request.getRequestURI() : "";
+            access = new Access(
+                null,
+                requestIp,
+                null,
+                requestUrl,
+                System.currentTimeMillis()
+            );
+            Access.set(access);
+        }
         access.setAccessToken(accessToken);
     }
 
