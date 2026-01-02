@@ -1,12 +1,15 @@
 package com.aizz.mindmingle.persistence.mapper;
 
-import com.aizz.mindmingle.domain.dos.TeacherDO;
+import com.aizz.mindmingle.domain.dos.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 教师mapper层
+ * 系统用户 Mapper 接口
+ *
+ * @author zhangyuliang
  */
 @Mapper
-public interface TeacherMapper extends BaseMapper<TeacherDO> {
+public interface UserMapper extends BaseMapper<UserDO> {
+
 }
